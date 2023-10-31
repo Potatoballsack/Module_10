@@ -9,8 +9,7 @@ import unittest
 from student import Student
 
 class TestStudent(unittest.TestCase):
-    """Tests for the class Student."""
-
+    # Tests for the Student class. 
     def setUp(self):
         """Create a student for use in all test methods."""
         self.student = Student('Doe', 'John', 'Engineering', 3.5)
