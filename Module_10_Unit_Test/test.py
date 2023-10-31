@@ -11,11 +11,11 @@ from student import Student
 class TestStudent(unittest.TestCase):
     # Tests for the Student class. 
     def setUp(self):
-        """Create a student for use in all test methods."""
+        # Create a student for use in all test methods.
         self.student = Student('Doe', 'John', 'Engineering', 3.5)
 
     def tearDown(self):
-        """Tear down the student created."""
+        # Tears down the student created.
         self.student = None
 
     def test_object_created_required_attributes(self):
@@ -27,7 +27,7 @@ class TestStudent(unittest.TestCase):
         self.assertEqual(self.student.gpa, 3.5)
 
     def test_student_str(self):
-        self.assertEqual(str(self.student), 'Doe, John has major Engineering with gpa: 3.5')
+        self.assertEqual(str(self.student), 'Doe, John has major Engineering with gpa: 3.5') # Calls the returning value of __str__.
 
     def test_object_not_created_error_last_name(self):
         with self.assertRaises(ValueError):
