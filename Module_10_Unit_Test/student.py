@@ -1,5 +1,5 @@
 class Student:
-    """Student class"""
+    # Student class.
     def __init__(self, lname, fname, major, gpa=0.0):
         if not lname: raise ValueError("Last name cannot be empty.")
         if not fname: raise ValueError("First name cannot be empty.")
